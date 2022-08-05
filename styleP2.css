@@ -1,0 +1,315 @@
+
+body::-webkit-scrollbar{
+    width: 1px;
+    height: 5px;
+    }
+    
+  body::-webkit-scrollbar-thumb{
+    background: #000000;
+    border: 2.9px solid #1c1c1c81;
+    border-radius: 100px;
+  }
+    
+  body::-webkit-scrollbar-track{
+    background: #ecf4fff8;
+    border-radius: 100px;
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+    margin: 15px 0px;
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+  
+  * {
+  outline: none;
+  box-sizing: border-box;
+  }
+  
+  :root {
+    --body-font: "Poppins", sans-serif;
+    --scrollbar-bg: rgb(1 2 3 / 40%);
+   } 
+   
+  
+  
+  /*
+  .light-mode {
+  --theme-bg-color: rgba(0, 0, 0, 0.425);
+  --theme-color: #3c3a3a;
+  --inactive-color: #333333;
+  --button-inactive: #3c3a3a;
+  --search-bg: rgb(255 255 255 / 31%);
+  --dropdown-bg: #f7f7f7;
+  --overlay-bg: rgb(255 255 255 / 30%);
+  --dropdown-hover: rgb(236 236 236);
+  --border-color: rgb(255 255 255 / 35%);
+  --popup-bg: rgb(255 255 255);
+  --hover-menu-bg: rgba(255 255 255 / 35%);
+  --scrollbar-bg: rgb(255 253 253 / 57%);
+  --content-title-color: --theme-color;
+  } */
+  
+  html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  
+  }
+  
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+  background-image: url(https://wallpapershome.com/images/wallpapers/macos-big-sur-1280x720-dark-wwdc-2020-22655.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  width: 100%;
+  height: 100vh;
+  }
+  
+  .video-bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }
+  
+  .buttonReturn{
+    background-color: rgb(255 255 255 / 13%);
+    border-radius: px;
+    border-color: rgb(113 119 144 / 0%);
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    --body-font: "Poppins", sans-serif;
+    color: rgb(255 255 255);
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+  }
+  
+  #button:hover{
+    color: #000000;
+    background-color: #4e4d4d00; 
+    border-color: #3f3e3e00; 
+    transition: 0.3s;
+    opacity: 0.7;
+    transform: scale(1.20);
+    background-color: var(--theme-bg-color);
+  }
+  
+  .conteiner{
+    border: 1px solid transparent;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+    backdrop-filter: blur(35px);
+    }
+    
+    .player {
+    position: relative; 
+    width: 100%; 
+    border-radius: 15px;
+    /* padding: 100px; */
+    border: 1px solid transparent;  
+    }
+    
+    #transicao:hover{
+      background-color: rgba(0, 0, 0, 0.267);
+      /* border-color: #3f3e3e7c;  */
+      transition: 0.3s;
+      opacity: inherit;
+      /* transform: scale(1.2); */
+    }
+  
+  
+  .player-cover {
+    display: inline-block;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    border-radius: 15px;
+  }
+  
+  .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .track-art{
+    margin: 25px;
+    height: 150px;
+    width: 150px;
+    /* border: 2px solid rgba(255, 255, 255, 0.199); */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    /* -moz-box-shadow: 0px 6px 5px #ccc;
+    -webkit-box-shadow:0px 6px 5px #ccc;
+    box-shadow: 0px 6px 5px #ccc; */
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius: 190px;
+    filter: grayscale(1);
+  }
+  
+  .now-playing{
+    font-size: 1rem;
+  }
+  .track-name{
+    font-size: 2.5rem;
+  }
+  .track-artist{
+    margin-top: 5px;
+    font-size: 1.5rem;
+  }
+  
+  .slider_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #f5f5f50d;
+    /* -webkit-transition: .2s; */
+    transition: opacity .2s;
+  }
+  .seek_slider::-webkit-slider-thumb,
+  .volume_slider::-webkit-slider-thumb{
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 15px;
+      height: 15px;
+  
+      border: 3px solid #f5f6f8;
+      cursor: pointer;
+      border-radius: 100%;
+  }
+  .seek_slider:hover,
+  .volume_slider:hover{
+      opacity: 1.0;
+  }
+  .seek_slider{
+      width: 60%;
+  }
+  .volume_slider{
+      width: 30%;
+  }
+  .current-time,
+  .total-duration{
+      padding: 10px;
+  }
+  
+  i,
+  i.fa-play-circle,
+  i.fa-pause-circle,
+  i.fa-step-forward,
+  i.fa-step-backward{
+      cursor: pointer;
+  }
+  .randomActive{
+      color: black;
+  }
+  .rotate{
+      animation: rotation 8s infinite linear;
+  }
+  @keyframes rotation{
+      from{
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(359deg);
+      }
+  }
+  .loader{
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .loader .stroke{
+      background: #f1f1f1;
+      height: 150%;
+      width: 10px;
+      border-radius: 50px;
+      margin: 0px 5px;
+      animation: animate 1.4s linear infinite;
+  }
+  @keyframes animate{
+      50%{
+          height: 20%;
+          background: #4286f4;
+      }
+      100%{
+          height: 100%;
+      }
+  }
+  .stroke:nth-child(1){
+      animation-delay: 0s;
+  }
+  .stroke:nth-child(2){
+      animation-delay: 0.3s;
+  }
+  .stroke:nth-child(3){
+      animation-delay: 0.6s;
+  }
+  .stroke:nth-child(4){
+      animation-delay: 0.9s;
+  }
+  .stroke:nth-child(5){
+      animation-delay: 0.6s;
+  }
+  .stroke:nth-child(6){
+      animation-delay: 0.3s;
+  }
+  .stroke:nth-child(7){
+      animation-delay: 0s;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .active{
+    color: black;
+  }
+  .repeat-track,
+  .random-track,
+  .playpause-track,
+  .prev-track,
+  .next-track{
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .2s;
+  }
+  .repeat-track:hover,
+  .random-track:hover,
+  .playpause-track:hover,
+  .prev-track:hover,
+  .next-track:hover{
+    opacity: 1.0;
+  }
